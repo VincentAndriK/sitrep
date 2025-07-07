@@ -19,8 +19,16 @@ function loadFirst() {
     var namaBulan = arrayBulan[today.getMonth() - 1];
     var link = `${year}${month}`;
 
+    
+
     $(".bulanIni").each(function () {
       $(this).text(`${namaBulan} ${year}`);
+    });
+    $("#report-month").each(function () {
+      $(this).attr("value", `${year}-${month}`);
+    });
+    $("#report-month").each(function () {
+      $(this).attr("max", `${year}-${month}`);
     });
     $(".PMK").each(function () {
       $(this).attr("href", "./PMK/" + link + ".html");
