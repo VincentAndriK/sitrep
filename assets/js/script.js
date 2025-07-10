@@ -29,6 +29,10 @@ function loadFirst() {
 }
 
 function onReport() {
+  Swal.fire({
+  title: "Data berhasil diperbaharui!",
+  icon: "success"
+});
   const reportMonth = $("#report-month").val();
   if (!reportMonth) {
     alert("Silakan pilih bulan terlebih dahulu. / Please select a month first.");
