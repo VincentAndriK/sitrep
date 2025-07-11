@@ -20,7 +20,7 @@ function loadFirst() {
   const today = new Date();
   const year = today.getFullYear();
   const month = String(today.getMonth()).padStart(2, "0");
-  const namaBulan = getMonthName(today.getMonth());
+  const namaBulan = getMonthName(today.getMonth() - 1);
   const link = `${year}${month}`;
 
   $(".bulanIni").text(`${namaBulan} ${year}`);
